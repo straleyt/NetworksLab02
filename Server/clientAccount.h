@@ -1,8 +1,7 @@
 /**
     CSCI 4761 Lab02
     clientAccount.h
-    Purpose: Calculates the area of a circle and the volume
-    of a sphere.
+    Purpose: .h for clientAccount.cpp
 
     @author Tegan Straley
     @version 1.0 3/17/2018

@@ -1,7 +1,7 @@
 /**
     CSCI 4761 Lab02
     clientAccount.cpp
-    Purpose: 
+    Purpose: clientAccount class, creates users and appointments
 
     @author Tegan Straley
     @version 1.0 3/17/2018
@@ -12,7 +12,6 @@
 #include <vector>
 #include <iostream>
 #include "clientAccount.h"
-
 
 void clientAccount::populate(std::string username) {
     std::ifstream infile( username + ".txt");
@@ -68,11 +67,9 @@ void clientAccount::write() {
     ofstream.close();
 }
 
-
 std::string clientAccount::readPassword(std::string) {
     return this->password;
 }
-
 
 bool clientAccount::exists(std::string username) {
     std::ifstream infile(username+".txt");
@@ -87,6 +84,7 @@ void clientAccount::remove() {
 
 
 int clientAccount::conflictCheck(std::string date, std::string time, std::string username) {
+	//Checks if there is already an appointment at same time & date (0 if none, sends 1 if already app)
     return appointmentTable.count(date+time);
 }
 

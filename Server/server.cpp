@@ -2,7 +2,7 @@
     CSCI 4761 Lab02
     server.cpp
     Purpose: Runs the server side of the calendar/account program
-
+				--built off of the server code given to us by Ra.
     @author Tegan Straley
     @version 1.0 3/17/2018
 */
@@ -114,9 +114,8 @@ int main(void) {
                 recvbuf[numbytes] = '\0';
                 std::string loginChoice = recvbuf;
                 std::cout << "[Client] " << loginChoice << "\n";
-                /*
-                 * If user decides to login
-                 */
+				
+                //Login
                 if(!loginChoice.compare("A") || !loginChoice.compare("a")){
                     while(!validated) {
 
@@ -153,13 +152,10 @@ int main(void) {
                             send(new_fd, send_buf.c_str(), 127, 0);
                             std::cout << "[Server]: " << send_buf << "\n";
                         }
-
-
                     }
 
-                /*
-                 * If user wants to create a new account
-                 */
+
+                 //If user wants to create a new account
                 }
                 else if(!loginChoice.compare("B") || !loginChoice.compare("b")){
                     //receive username and check if user already exists

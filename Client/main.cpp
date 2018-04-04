@@ -1,8 +1,8 @@
 /**
     CSCI 4761 Lab02
     main.cpp
-    Purpose: 
-
+    Purpose: To run a client to connect to the calendar server.cpp
+				--built off of the client code given to us by Ra.
     @author Tegan Straley
     @version 1.0 3/17/2018
 */
@@ -19,7 +19,7 @@
 
 #include <iostream>
 #include <string>
-#include "Utilities.h"
+#include "validation.h"
 
 #define PORT 6666				// port client will be connecting to 
 #define MAXDATASIZE 512 		//max # of bytes client receives at once

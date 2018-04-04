@@ -1,11 +1,11 @@
-clientRun: main.o Utilities.o
-	g++ -std=c++11 main.o Utilities.o -o clientRun
+clientRun: main.o validation.o
+	g++ -std=c++11 main.o validation.o -o clientRun
 
 main.o: main.cpp
 	g++ -c -std=c++11 main.cpp
 
-Utilities.o: Utilities.cpp
-	g++ -c -std=c++11 Utilities.cpp
+validation.o: validation.cpp
+	g++ -c -std=c++11 validation.cpp
 
 clean:
 	rm *.o clientRun
